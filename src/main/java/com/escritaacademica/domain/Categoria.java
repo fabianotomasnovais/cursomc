@@ -11,7 +11,7 @@ import javax.persistence.Id;
 public class Categoria implements Serializable{
 	private static final long serialVersionUID = 1L;
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY) //Essa estrategia funciona com maioria do banco de dados, verificar se funciona com o postgresql
+	@GeneratedValue(strategy=GenerationType.IDENTITY) //Essa estrategia funciona com maioria do banco de dados para a geração dos Ids, verificar se funciona com o postgresql
 	private Integer id;
 	private String nome;
 	
