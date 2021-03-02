@@ -13,14 +13,12 @@ import com.escritaacademica.services.exceptions.ObjectNotFoundException;
 public class CategoriaService {
 
 	@Autowired
-	private CategoriaRepository repo;
+	private CategoriaRepository repo; //Repository of categories
 
-	public Categoria buscar(Integer id) {
-		// Optional<Categoria> obj = repo.findById(id);
-		// return obj.orElse(null);
+	public Categoria buscar(Integer id) { //Try to find object by id
 		Optional<Categoria> obj = repo.findById(id);
 		return obj.orElseThrow(() -> new ObjectNotFoundException(
-				"Objeto não encontrado! Id: " + id + ", Tipo: " + Categoria.class.getName()));
+				"Objeto não encontrado! Id: " + id + ", Tipo: " + Categoria.class.getName())); //If not found throw a exception
 	}
 
 }

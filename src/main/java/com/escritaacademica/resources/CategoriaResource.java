@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.escritaacademica.domain.Categoria;
 import com.escritaacademica.services.CategoriaService;
 
+//Rest Controller to response the client requests 
+
 @RestController
 @RequestMapping(value = "/categorias")
 public class CategoriaResource {
@@ -17,11 +19,11 @@ public class CategoriaResource {
 	@Autowired //Instanciar automaticamente
 	private CategoriaService service;
 	
-	@RequestMapping(value="/{id}",method = RequestMethod.GET)
+	@RequestMapping(value="/{id}",method = RequestMethod.GET) //Use the id to find the object
 	public ResponseEntity<?> find(@PathVariable Integer id) {
 		
-		Categoria obj = service.buscar(id);
-		return ResponseEntity.ok().body(obj);
+		Categoria obj = service.buscar(id); //Service try to find the object
+		return ResponseEntity.ok().body(obj); //Return the object
 	}
 				
 }
