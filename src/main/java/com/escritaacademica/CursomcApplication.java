@@ -70,7 +70,7 @@ public class CursomcApplication implements CommandLineRunner {
 		Estado est2 = new Estado(null,"São Paulo");
 		
 		Cidade c1 = new Cidade(null,"Ouro Preto",est1);
-		Cidade c2 = new Cidade(null,"Cachoeira do Campo",est1);
+		Cidade c2 = new Cidade(null,"Cachoeira do Campo 2",est1);
 		Cidade c3 = new Cidade(null,"Campinas",est2);
 		
 		est1.getCidades().addAll(Arrays.asList(c1));
